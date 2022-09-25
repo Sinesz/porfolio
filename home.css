@@ -1,0 +1,130 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Zen Maru Gothic', sans-serif;       
+    background-color: blue;
+    transition: 1000ms;
+    /* border: 3px solid rgb(80, 4, 48); */
+}
+/*.Section_top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}*/
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    /* border: 3px solid rgb(80, 72, 4);  */
+}
+
+.content h1{
+    color: #1d1f1c;
+    font-size: 5vw;
+    letter-spacing: 0.3vw;
+    
+}
+.content h1 span{
+    color: #f4df85;
+}
+.content p{
+    font-size: 1.5vw;    
+    color: #ffffff60;
+
+}
+
+#bar{
+    position: fixed;
+    width: 12vw; /* 12% 230px when opened */
+    height: 100vh; /*constant */
+    background-color: black;
+
+    right: 4vw;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: 1000ms;
+    
+}
+
+ul {
+    padding: 0;
+    position: absolute;
+    
+    top: 50%; transform: translateY(-50%); /* sets the bar list in the vertical middle */
+    list-style: none;
+    width: 4vw; /* original 80% */
+    margin-left: 0%;/* original 10% */
+    transition: 1000ms;
+    /*border: 3px solid green;*/
+    
+}
+
+ul li {
+    
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px 0;
+    font-size: 2vw;
+    text-align: center;
+    transition: 1000ms;
+    /* border: 3px solid rgb(80, 72, 4); */
+}
+a { 
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+@media screen and (max-width: 600px) {
+    #bar{
+        width: 100vw; 
+        height: 10vh;        
+        right: 0vh;
+        top: 5vh;
+        transform: translateY(-100%);
+        }
+
+    ul {            
+            display: inline-block;
+            padding: 0;
+            left: 50%; transform: translateX(-50%);
+            position: absolute;
+            /* next line sets the bar list in the vertical middle */
+            left: 50%; transform: translateX(-50%);
+            height: 5vh; 
+            width: 100vw;
+            margin-top: 0;            
+            text-align: center;
+            
+            /* border: 3px solid green; */
+        }   
+        
+    ul li {
+            display: inline-block;
+           
+            padding: 0 5vw;
+            font-size: 3vh;
+        
+        }
+    .content h1{
+            font-size: 6vh;
+            letter-spacing: 0.3vh;
+        }
+    .content p{
+            font-size: 3vw;
+        }
+}
+
